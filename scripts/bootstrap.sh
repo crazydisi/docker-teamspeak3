@@ -33,27 +33,27 @@ case "$DB_TYPE" in
       DB=ts3server.sqlitedb
       if [ -f $DATADIR/$DB ]; then
         echo "DB exists - just create link"
-        ln -s $DATADIR/$DB /opt/teamspeak3-server_linux-amd64/ts3server.sqlitedb
+        ln -s $DATADIR/$DB /opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb
       else
         echo "DB doesn't exists ... create empty DB and link it"
         wget -O $DATADIR/$DB $DB_DL_LINK
-        ln -s $DATADIR/$DB /opt/teamspeak3-server_linux-amd64/ts3server.sqlitedb
+        ln -s $DATADIR/$DB /opt/teamspeak3-server_linux_amd64/ts3server.sqlitedb
       fi
 
       echo "Link the files folder (Create if necessary)"
       mkdir -p $DATADIR/files
-      if ! [ -L /opt/teamspeak3-server_linux-amd64/files ]; then
-        rm -rf /opt/teamspeak3-server_linux-amd64/files
-        ln -s $DATADIR/files /opt/teamspeak3-server_linux-amd64/files
+      if ! [ -L /opt/teamspeak3-server_linux_amd64/files ]; then
+        rm -rf /opt/teamspeak3-server_linux_amd64/files
+        ln -s $DATADIR/files /opt/teamspeak3-server_linux_amd64/files
       fi
 
       echo "Check if a ts3server.ini exists or if we need to create a new config file"
       if [ -f $VOLUME/ts3server.ini ]; then
         echo "Found and using file"
-        /opt/teamspeak3-server_linux-amd64/ts3server_minimal_runscript.sh inifile="$DATADIR/ts3server.ini"
+        /opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh inifile="$DATADIR/ts3server.ini"
       else
         echo "Creating new $DATADIR/ts3server.ini file with given ports"
-        /opt/teamspeak3-server_linux-amd64/ts3server_minimal_runscript.sh \
+        /opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh \
           createinifile=1 \
           inifile="$DATADIR/ts3server.ini" \
           licensepath="$DATADIR/" \
