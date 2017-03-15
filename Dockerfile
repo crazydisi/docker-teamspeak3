@@ -18,7 +18,7 @@ ENV DB_TYPE SQLite
 VOLUME ["/tsdata"]
 
 ADD ${TS_BASEURL} /tmp/
-RUN cd /opt && tar -xzf /tmp/teamspeak3-server_linux_amd64-*.tar.bz2
+RUN cd /opt && tar -jxf /tmp/teamspeak3-server_linux_amd64-*.tar.bz2
 
 ADD /scripts/ /opt/scripts/
 RUN chmod -R 774 /opt/scripts/
