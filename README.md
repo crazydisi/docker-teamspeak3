@@ -12,6 +12,9 @@ MySQL support will be there somewehere in the near future (you could help accomp
   * licensekey.dat
   * logs
 
+##  License
+  GNU General Public License (see LICENSE file)
+
 ## Usage
   * Get container
 
