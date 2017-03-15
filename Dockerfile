@@ -7,7 +7,7 @@ FROM ubuntu
 MAINTAINER Dennis Philpot
 
 ENV TS_VERSION 3.0.13.6
-ENV TS_BASEURL http://dl.4players.de/ts/releases/${TS_VERSION}/teamspeak3-server_linux-amd64-${TS_VERSION}.tar.bz2
+ENV TS_BASEURL http://dl.4players.de/ts/releases/${TS_VERSION}/teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2
 
 ENV PORT_SERVER 9987
 ENV PORT_TRANSFER 30033
