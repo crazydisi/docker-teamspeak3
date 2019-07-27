@@ -50,7 +50,7 @@ case "$DB_TYPE" in
       echo "Check if a ts3server.ini exists or if we need to create a new config file"
       if [ -f $VOLUME/ts3server.ini ]; then
         echo "Found and using file"
-        /opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh inifile="$DATADIR/ts3server.ini"
+        /opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh inifile="$DATADIR/ts3server.ini license_accepted=1"
       else
         echo "Creating new $DATADIR/ts3server.ini file with given ports"
         /opt/teamspeak3-server_linux_amd64/ts3server_minimal_runscript.sh \
