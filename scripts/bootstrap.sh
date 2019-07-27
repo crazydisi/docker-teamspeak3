@@ -57,6 +57,7 @@ case "$DB_TYPE" in
           createinifile=1 \
           inifile="$DATADIR/ts3server.ini" \
           licensepath="$DATADIR/" \
+          license_accepted=1 \
           query_ip_whitelist="$DATADIR/query_ip_whitelist.txt" \
           query_ip_backlist="$DATADIR/query_ip_blacklist.txt" \
           logpath="$DATADIR/logs/" \
