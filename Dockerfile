@@ -17,7 +17,7 @@ ENV DB_TYPE SQLite
 
 VOLUME ["/tsdata"]
 
-RUN apt-get -y update && apt-get -y install bzip2
+RUN apt-get -y update && apt-get -y install bzip2 wget
 
 ADD ${TS_BASEURL} /tmp/
 RUN cd /opt && tar -xf /tmp/teamspeak3-server_linux_amd64-*.tar.bz2
