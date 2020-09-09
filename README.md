@@ -1,7 +1,7 @@
 # docker-teamspeak3
 
 Ubuntu base image with Teamspeak3 Server running a local SQLite DB.
-MySQL support will be there somewehere in the near future (you could help accomplish it if you want :) )
+MySQL support will be there somewehere in the future (you could help accomplish it if you want :) )
 
 ## Features
 * Persistent files on the host
